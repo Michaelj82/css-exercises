@@ -4,6 +4,9 @@
 }
 
 .container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr 6fr 1fr;
   text-align: center;
 }
 
@@ -16,6 +19,7 @@
 }
 
 .header {
+  grid-area: span 1 / span 2;
   background-color: #393f4d;
 }
 
@@ -34,6 +38,7 @@
 }
 
 .sidebar {
+  grid-area: span 2 / span 1;
   background-color: #FF7755;
 }
 
@@ -56,6 +61,7 @@
 }
 
 .nav {
+  grid-area: span 1 / span 1;
   background-color: #FF7755;
 }
 
@@ -68,6 +74,12 @@
 }
 
 .article {
+  grid-area: span / span ;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+
   background-color: #bccbde;
 }
 
@@ -96,6 +108,7 @@
 }
 
 .footer {
+  grid-area: span 1 / span 2;
   background-color: #393f4d;
 }
 
